@@ -1,0 +1,68 @@
+.Drawer {
+  position: fixed;
+  right: -300px;
+  top: 0;
+  z-index: 500;
+  background-color: var(--bgColor-secondary);
+  width: 300px;
+  height: 100vh;
+  border-left: 1px solid var(--border-color);
+  transition: right 0.5s ease-in;
+  box-shadow: -2px 0px 4px var(--border-color);
+}
+
+.ShowDrawer {
+  right: 0;
+}
+
+.DrawerHeader {
+  display: flex;
+  padding: 20px;
+  color: var(--color-tertiary);
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.DrawerHeader i {
+  cursor: pointer;
+}
+
+.DrawerHeader i:hover {
+  color: var(--color-primary);
+}
+
+.DrawerHeader p {
+  margin: 0;
+  margin-left: 10px;
+}
+
+.DrawerItems {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.DrawerItem {
+  padding: 10px 0px 10px 20px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--color-tertiary);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.DrawerItem:hover {
+  color: var(--color-primary);
+  fill: var(--color-primary);
+}
+
+.DrawerItemIcon {
+  width: 30px;
+  height: 30px;
+}
+
+.DrawerItem span {
+  margin-left: 20px;
+}

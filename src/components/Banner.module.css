@@ -1,0 +1,28 @@
+.Banner {
+  display: grid;
+  grid-template-columns: 2vw 1fr 2vw;
+}
+
+.BannerTitle {
+  grid-area: 1 / 2 / 2 / 3;
+  text-align: center;
+  vertical-align: middle;
+  background-color: var(--bgColor-primary);
+  color: var(--color-secondary);
+  font-weight: 500;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  padding: 100px 0;
+}
+
+@media (min-width: 576px) {
+  .Banner {
+    grid-template-columns: 5vw 1fr 5vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .Banner {
+    grid-template-columns: 10vw 1fr 10vw;
+  }
+}

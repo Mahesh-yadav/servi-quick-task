@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Header from './components/Header';
+import Banner from './components/Banner';
+import Services from './components/Services';
+import Drawer from './components/Drawer';
 
 function App() {
+  const [selectedId, setSelectedId] = useState();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Banner />
+      <Services selectedId={selectedId} setSelectedId={setSelectedId} />
+      <Drawer
+        open={selectedId !== undefined}
+        selectedId={selectedId}
+        setSelectedId={setSelectedId}
+      />
+      <div style={{ height: '1000px' }}></div>
     </div>
   );
 }
